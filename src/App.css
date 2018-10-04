@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: center;
+}
+
+.github {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.githubClick {
+  color: white;
+}
+
+.Marker {
+  margin-top: 30px;
+}
+
+.lastPosition {
+  margin: 5px 0;
+  font-size: 12px;
+}
