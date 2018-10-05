@@ -11,20 +11,24 @@ class App extends Component {
         <div className="wrapperInfo">
           <ProviderGeo>
             <ConsumerGeo>
-              {({ address, time, err }) => (
-                <div className="Information">
-                  {err ? (
-                    err
-                  ) : (
-                    <div>
-                      <p className="lastPosition">
-                        Your last position at {new Date(time).toTimeString()}:
-                      </p>
-                      {address}
-                    </div>
-                  )}
-                </div>
-              )}
+              {({ address, time, err, isLoading }) =>
+                isLoading ? (
+                  <i className="fa fa-cog fa-spin Spinner" />
+                ) : (
+                  <div className="Information">
+                    {err ? (
+                      err
+                    ) : (
+                      <div>
+                        <p className="lastPosition">
+                          Your last position at {new Date(time).toTimeString()}:
+                        </p>
+                        {address}
+                      </div>
+                    )}
+                  </div>
+                )
+              }
             </ConsumerGeo>
           </ProviderGeo>
         </div>
