@@ -55,7 +55,7 @@ class ProviderGeo extends Component {
           }
         },
         {
-          enableHighAccuracy: true
+          enableHighAccuracy: false
         }
       );
     }
